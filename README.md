@@ -1,3 +1,11 @@
+This repository is released for reproducing the results in the following publication
+
+Hande Alemdar, Vincent Leroy, Adrien Prost-Boucle, and Frederic Petrot. “Ternary Neural Networks for Resource- Efficient AI Applications”. In: International Joint Conference on Neural Networks (IJCNN). 2017.
+
+This repository provides the training code of the student network.
+The ternarization code is provided in the following repository.
+
+https://github.com/slide-lig/tnn_convert
 
 
 Installation
@@ -70,6 +78,7 @@ Example resuming existing training:
 
 Configuration options
 ---------------------
+```
 #
 # arch
 #
@@ -158,6 +167,7 @@ main.logFileSize=100000000                   # max log file size
 main.trace.loss=0                            # set to 1 to enable tracing of training loss
 main.trace.learningRate=0                    # set to 1 to enable tracing of learning rate
 main.hist.params=0                           # set to 1 to enable plotting histograms of model parameters before each epoch
+```
 
 - Composite Configuration
 
@@ -229,3 +239,20 @@ To load CSV files of weights and biases (for each layer) to a saved network:
 ```
 ~$ th util.lua --run csv2net --data /path/to/epoch.net
 ```
+
+License
+============
+
+Copyright 2017 Université Grenoble Alpes
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
