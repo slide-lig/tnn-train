@@ -277,7 +277,7 @@ torch.setdefaulttensortype('torch.DoubleTensor')
     require 'cudnn'
 
   local model
-  model = torch.load('/home/slide/alemdar/workspace/BinaryNet/Results/SVHN/Net')
+  model = torch.load('path/to/your/model')
   print(model)
 
   --
