@@ -77,7 +77,7 @@ for i,hiddenSize in ipairs(opt.arch.neuronPerLayerCount) do
    inputHeight = hiddenSize
 end
 
-model:add(nn.TernaryConnectLinear(inputHeight, #(ds:classes())))
+model:add(nn.TernaryConnectLinear(inputHeight, #(ds:classes()) , opt.arch.stochWeightFlag ))
 
 if opt.arch.finalBN>0 then
   model:add(nn.BatchNormalization(#(ds:classes()), opt.arch.batchnorm.epsilon))
