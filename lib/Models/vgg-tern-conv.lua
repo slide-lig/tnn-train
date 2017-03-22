@@ -77,7 +77,7 @@ for i,hiddenSize in ipairs(opt.arch.neuronPerLayerCount) do
    inputHeight = hiddenSize
 end
 
-model:add(nn.Linear(inputHeight, #(ds:classes())))   -- 10 is the number of outputs of the network (in this case, 10 digits)
+model:add(nn.TernaryConnectLinear(inputHeight, #(ds:classes())))
 
 if opt.arch.finalBN>0 then
   model:add(nn.BatchNormalization(#(ds:classes()), opt.arch.batchnorm.epsilon))
